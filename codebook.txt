@@ -1,0 +1,29 @@
+Codebook
+
+Raw data:
+The given files are related as shown in ER.pdf and described in readme.txt
+The generated tables have the same names as the original txt-files
+
+The colname of subject_test and subject_train has been changed into "subject"
+The colname of y_test and y_train has been changed into "activity_id
+
+Combine x-test, subject_test and y_test to the table df_test with 2947 obs of 563 vars.
+This table contains now the measurement data and its corresponding person-id and activity-id
+
+Combine x-train, subject_train and y_train to the table df_train with 7352 obs of 563 vars to get the same information for the training data as we got before for the test data
+
+Merge test and train data by adding rows to get one dataset df_test_train for test and training data with 10299 obs of 563 vars
+
+get rows from features stored in f_names (chr 1:563) to rename colnames in dataframe df_test_train
+
+add the colnames in f_names for the last two cols as "subject" and "activity_id"
+
+change colnames in df_test_train from V.. into readable colnames with fnames
+
+Extract colnames in f_names containing "mean()" or "std()" or "subject" or "activity_id"
+
+Store the required cols with data in df_m_std with 10.299 of 81 vars
+
+Merge the tables df_m_std and activity_labels to add the activities to the matching activity ids stored in table mean_std with 10.299 of 81 vars
+
+Calculate average for each variable for each activity and each subject and store it in tidy_data_set 
